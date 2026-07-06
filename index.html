@@ -185,17 +185,23 @@
     line-height:1.45;
   }
 
+  /* 앱스토어 / 구글플레이 배지 */
   .store-badges{
+    width:100%;
     margin:30px 0 8px;
-    display:flex;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
     align-items:center;
-    justify-content:center;
-    gap:20px;
     animation:rise .6s cubic-bezier(.2,.7,.3,1) .26s both;
   }
 
   .store-badges a{
-    display:block;
+    width:100%;
+    height:48px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     line-height:0;
     text-decoration:none;
     background:transparent;
@@ -204,7 +210,6 @@
     margin:0;
     border-radius:0;
     box-shadow:none;
-    flex:0 0 auto;
     transition:transform .15s ease, opacity .15s ease;
   }
 
@@ -219,9 +224,10 @@
 
   .store-badges img{
     display:block;
-    height:44px;
-    width:auto;
-    max-width:100%;
+    width:100%;
+    max-width:170px;
+    height:48px;
+    object-fit:contain;
     border:0;
     background:transparent;
     box-shadow:none;
@@ -304,8 +310,13 @@
       gap:14px;
     }
 
+    .store-badges a{
+      height:44px;
+    }
+
     .store-badges img{
-      height:40px;
+      max-width:155px;
+      height:44px;
     }
   }
 
@@ -322,8 +333,13 @@
       gap:10px;
     }
 
+    .store-badges a{
+      height:38px;
+    }
+
     .store-badges img{
-      height:34px;
+      max-width:138px;
+      height:38px;
     }
 
     .contact a{
@@ -342,7 +358,7 @@
 <body>
   <main class="wrap">
 
-    <img class="logo" src="logo.png?v=10" alt="UpToDate Expert AI">
+    <img class="logo" src="logo.png?v=11" alt="UpToDate Expert AI">
 
     <div class="rule" aria-hidden="true">
       <span class="g"></span>
@@ -396,11 +412,11 @@
 
     <div class="store-badges">
       <a href="https://apps.apple.com/app/uptodate/id334265345" target="_blank" rel="noopener" aria-label="App Store에서 다운로드">
-        <img src="app_store.png?v=10" alt="Download on the App Store">
+        <img src="app_store.png?v=11" alt="Download on the App Store">
       </a>
 
       <a href="https://play.google.com/store/apps/details?id=com.uptodate.android" target="_blank" rel="noopener" aria-label="Google Play에서 다운로드">
-        <img src="google_play.png?v=10" alt="Get it on Google Play">
+        <img src="google_play.png?v=11" alt="Get it on Google Play">
       </a>
     </div>
 
@@ -410,7 +426,7 @@
 
       <div class="foot">
         <span>Wolters Kluwer Health · Clinical Effectiveness</span>
-        <img class="wk" src="wk_logo.png?v=10" alt="Wolters Kluwer Health">
+        <img class="wk" src="wk_logo.png?v=11" alt="Wolters Kluwer Health">
       </div>
     </section>
 
