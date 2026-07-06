@@ -45,7 +45,7 @@
   .logo{
     display:block;
     width:100%;
-    max-width:240px;
+    max-width:312px;
     height:auto;
     margin:8px 0 4px;
     animation:rise .6s cubic-bezier(.2,.7,.3,1) both;
@@ -144,27 +144,25 @@
 
   /* ---- download badges ---- */
   .dl{
-    margin:28px 0 8px;
+    margin:24px 0 8px;
     display:flex;
-    gap:14px;
-    justify-content:flex-start;
-    flex-wrap:wrap;
+    gap:12px;
+    justify-content:stretch;
     animation:rise .6s cubic-bezier(.2,.7,.3,1) .26s both;
   }
   .dl a{
     display:flex;align-items:center;justify-content:center;
     background:#fff;
     border:1px solid var(--line);
-    border-radius:12px;
-    padding:13px 18px;
+    border-radius:var(--radius);
+    padding:16px 12px;
     transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
     flex:1 1 0;
-    min-width:150px;
-    max-width:200px;
+    min-width:0;
   }
   .dl a:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(20,24,30,.09);border-color:#d3d5d9}
   .dl a:active{transform:translateY(0)}
-  .dl img{height:26px;width:auto;display:block}
+  .dl img{height:32px;width:auto;display:block;max-width:100%}
 
   /* ---- contact ---- */
   .contact{
@@ -190,11 +188,21 @@
   .contact a:hover{color:var(--accent);border-color:var(--accent)}
   .foot{
     margin-top:26px;
-    text-align:left;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
     font-size:11.5px;
     color:#aab;
     font-family:"Fira Sans",sans-serif;
     letter-spacing:.02em;
+  }
+  .foot span{flex:0 1 auto}
+  .foot .wk{
+    height:22px;
+    width:auto;
+    flex:0 0 auto;
+    opacity:.9;
   }
 
   @keyframes rise{
@@ -268,7 +276,10 @@
     <section class="contact">
       <p class="lbl">사용 / 부서별 Demo 문의</p>
       <a href="mailto:Jiseong.Kim@WoltersKluwer.com">Jiseong.Kim@WoltersKluwer.com</a>
-      <p class="foot">Wolters Kluwer · Clinical Effectiveness</p>
+      <div class="foot">
+        <span>Wolters Kluwer Health · Clinical Effectiveness</span>
+        <img class="wk" src="wk_logo.png" alt="Wolters Kluwer Health">
+      </div>
     </section>
 
   </main>
