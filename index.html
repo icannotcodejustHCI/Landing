@@ -13,7 +13,6 @@
 <style>
   :root{
     --ink:#1f2124;
-    --ink-soft:#4a4d52;
     --muted:#7d8085;
     --line:#e6e7ea;
     --bg:#ffffff;
@@ -54,7 +53,6 @@
     flex-direction:column;
   }
 
-  /* ---- logo ---- */
   .logo{
     display:block;
     width:100%;
@@ -64,7 +62,6 @@
     animation:rise .6s cubic-bezier(.2,.7,.3,1) both;
   }
 
-  /* ---- accent divider ---- */
   .rule{
     display:flex;
     gap:5px;
@@ -78,12 +75,11 @@
     border-radius:2px;
   }
 
-  .rule .r{background:var(--red)}
   .rule .g{background:var(--green)}
+  .rule .r{background:var(--red)}
   .rule .b{background:var(--blue)}
   .rule .k{background:var(--ink)}
 
-  /* ---- hero copy ---- */
   .hero{
     text-align:left;
     padding:26px 4px 30px;
@@ -116,7 +112,6 @@
     color:var(--ink);
   }
 
-  /* ---- steps ---- */
   .steps-label{
     font-family:"Fira Sans",sans-serif;
     font-size:12px;
@@ -190,45 +185,48 @@
     line-height:1.45;
   }
 
-  .step .t .en{
-    font-family:"Fira Sans",sans-serif;
-  }
-
-  /* ---- download badges ---- */
-  .dl{
-    margin:28px 0 8px;
+  .store-badges{
+    margin:30px 0 8px;
     display:flex;
-    gap:14px;
     align-items:center;
     justify-content:center;
+    gap:20px;
     animation:rise .6s cubic-bezier(.2,.7,.3,1) .26s both;
   }
 
-  .dl a{
-    display:flex;
-    align-items:center;
-    justify-content:center;
+  .store-badges a{
+    display:block;
+    line-height:0;
     text-decoration:none;
-    flex:0 1 auto;
+    background:transparent;
+    border:0;
+    padding:0;
+    margin:0;
+    border-radius:0;
+    box-shadow:none;
+    flex:0 0 auto;
     transition:transform .15s ease, opacity .15s ease;
   }
 
-  .dl a:hover{
+  .store-badges a:hover{
     transform:translateY(-2px);
     opacity:.92;
   }
 
-  .dl a:active{
+  .store-badges a:active{
     transform:translateY(0);
   }
 
-  .dl img{
+  .store-badges img{
+    display:block;
     height:44px;
     width:auto;
-    display:block;
+    max-width:100%;
+    border:0;
+    background:transparent;
+    box-shadow:none;
   }
 
-  /* ---- contact ---- */
   .contact{
     padding-top:22px;
     text-align:left;
@@ -302,11 +300,11 @@
       display:none;
     }
 
-    .dl{
-      gap:10px;
+    .store-badges{
+      gap:14px;
     }
 
-    .dl img{
+    .store-badges img{
       height:40px;
     }
   }
@@ -320,16 +318,22 @@
       font-size:16.5px;
     }
 
-    .dl{
-      gap:8px;
+    .store-badges{
+      gap:10px;
     }
 
-    .dl img{
+    .store-badges img{
       height:34px;
     }
 
     .contact a{
       font-size:14px;
+    }
+
+    .foot{
+      flex-direction:column;
+      align-items:flex-start;
+      gap:10px;
     }
   }
 </style>
@@ -338,7 +342,7 @@
 <body>
   <main class="wrap">
 
-    <img class="logo" src="logo.png?v=3" alt="UpToDate Expert AI">
+    <img class="logo" src="logo.png?v=10" alt="UpToDate Expert AI">
 
     <div class="rule" aria-hidden="true">
       <span class="g"></span>
@@ -353,6 +357,7 @@
         <span class="en">UpToDate</span>의 <span class="en">Gold standard reference</span>를<br class="pc-br">
         더 빠르고 명확하게 이용해보세요.
       </p>
+
       <p class="sub">
         UpToDate Expert AI는 <b>UpToDate 콘텐츠만을 기반</b>으로 답변하는<br class="pc-br">
         Clinical Decision Support AI입니다.
@@ -389,13 +394,13 @@
       </li>
     </ol>
 
-    <div class="dl">
+    <div class="store-badges">
       <a href="https://apps.apple.com/app/uptodate/id334265345" target="_blank" rel="noopener" aria-label="App Store에서 다운로드">
-        <img src="app_store.png?v=3" alt="Download on the App Store">
+        <img src="app_store.png?v=10" alt="Download on the App Store">
       </a>
 
       <a href="https://play.google.com/store/apps/details?id=com.uptodate.android" target="_blank" rel="noopener" aria-label="Google Play에서 다운로드">
-        <img src="google_play.png?v=3" alt="Get it on Google Play">
+        <img src="google_play.png?v=10" alt="Get it on Google Play">
       </a>
     </div>
 
@@ -405,7 +410,7 @@
 
       <div class="foot">
         <span>Wolters Kluwer Health · Clinical Effectiveness</span>
-        <img class="wk" src="wk_logo.png?v=3" alt="Wolters Kluwer Health">
+        <img class="wk" src="wk_logo.png?v=10" alt="Wolters Kluwer Health">
       </div>
     </section>
 
