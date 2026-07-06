@@ -212,6 +212,9 @@
   @media (prefers-reduced-motion:reduce){
     *{animation:none!important}
   }
+  @media (max-width:480px){
+    .pc-br{display:none}
+  }
   @media (max-width:380px){
     .wrap{padding:32px 18px 44px}
     .hero .lead{font-size:16.5px}
@@ -231,12 +234,12 @@
 
     <section class="hero">
       <p class="lead">
-        임상 현장만을 위해 설계된 AI를 통해<br>
-        <span class="en">UpToDate</span>의 <span class="en">Gold standard reference</span>를<br>
+        임상 현장만을 위해 설계된 AI를 통해<br class="pc-br">
+        <span class="en">UpToDate</span>의 <span class="en">Gold standard reference</span>를<br class="pc-br">
         더 빠르고 명확하게 이용해보세요.
       </p>
       <p class="sub">
-        UpToDate Expert AI는 <b>UpToDate 콘텐츠만을 기반</b>으로 답변하는<br>
+        UpToDate Expert AI는 <b>UpToDate 콘텐츠만을 기반</b>으로 답변하는<br class="pc-br">
         Clinical Decision Support AI입니다.
       </p>
     </section>
